@@ -1,0 +1,98 @@
+#! /usr/bin/env bash
+#
+#  M51 :  5 fields, 100 obsnum's
+#
+# e.g.       lmtinfo.py grep NGC5194 Map | awk '{print $4}' | sort uniq -c
+#1     24 NGC5194                115.2712    on0,on1
+#2     29 NGC5194-central         88.6318    on2
+#3     23 NGC5194_north           88.6318    on3
+#4     23 NGC5194_south           88.6318    on4
+#5      1 NGC5194-HCN-central     88.6318    on5
+
+#  RA,DEC of most fields is:    202.469625  47.195172 (on0,on2,on3,on4,on5)
+#         on 13-2020-02-13 is:  202.469583  47.195278  = 0.10" in RA and 0.38" in dec, so ignore ($on1)
+
+# All single obsnums:   10778.76user 1697.01system 20:26.46elapsed 1017%CPU
+#                       10992.94user 1279.43system 21:23.59elapsed  956%CPU
+
+extra="admit=0 dv=200 dw=200 restart=1 pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
+extra="admit=0 dv=200 dw=200 restart=1 extent=400"
+extra="admit=1 dv=200 dw=200 restart=1 extent=400"
+
+# ons=$(lmtinfo.py grep NGC5194 Map | awk '{print $2}')
+
+# good ones
+on0="91112 91041 91037 90999 90995 90951 90947 90915 90911 90758 90744 90740 88971 88967 88882 88874"
+on1="90666 90664 90660 90658 90654 90652 90650 90648"
+on2="90462 90460 90458 90454 90452 90450 90446 90444 90442 90389 90385 90383 90381 90286 90282 90280 90276 90274 90270 90268 90163 90157 90155 90151 90149 90143 90141 90139 88990"
+on3="92504 92351 92294 92286 92274 92223 92215 91713 91681 91669 91661 91619 91613 91579 91534 91523 91368 91362 91356 91350 91344 91336 91328"
+on4="92626 92355 92300 92290 92280 92227 92219 91715 91683 91675 91671 91663 91621 91615 91536 91525 91370 91364 91358 91352 91346 91338"
+on5="88878"
+
+# bad ones
+on0b=""
+on1b=""
+on2b=""
+on3b=""
+on4b=""
+on5b=""
+
+
+# bad: 91340 (bad restfrq and ProjectId)
+
+obsnums="$on0 $on1 $on2 $on3 $on4 $on5"
+
+# oops, it got into two ProjectId's
+project1="2018-S1-MU-8"    # all but on1
+project2="2018S1-MU-8"     # only on1
+project=$project1
+
+npmax=4
+
+
+mkdir -p $project
+job1=$project/job1
+job2=$project/job2
+
+rm -f $job1 $job2
+touch $job1 $job2
+for o in $obsnums ; do
+    echo SLpipeline.sh obsnum=$o $extra >> $job1
+done
+
+nc=$(cat $job1 | wc -l)
+nc=16
+echo Using $nc cores
+
+parallel --jobs $nc < $job1
+
+(cd $project1; mk_summary1.sh > README.html)
+(cd $project2; mk_summary1.sh > README.html)
+
+#exit
+
+echo SLpipeline.sh obsnums=$(echo $on1 | sed 's/ /,/g') >> $job2
+echo SLpipeline.sh obsnums=$(echo $on2 | sed 's/ /,/g') >> $job2
+echo SLpipeline.sh obsnums=$(echo $on3 | sed 's/ /,/g') >> $job2
+echo SLpipeline.sh obsnums=$(echo $on4 | sed 's/ /,/g') >> $job2
+
+
+parallel --jobs 4 < $job2
+
+(cd $project; mk_summary1.sh > README.html)
+
+
+# comments
+
+# trials
+SLpipeline.sh obsnums=91112,90666 # admit=0
+SLpipeline.sh obsnums=91112,91041 # admit=0
+SLpipeline.sh obsnums=90462,92504,92626,88878 # admit=0
+
+#
+
+ons_co=$(echo $on0 $on1 | sed 's/ /,/g')
+ons_hcn=$(echo $on2 $on3 $on4 $on5 | sed 's/ /,/g')
+
+SLpipeline.sh obsnums=$ons_co # admit=0
+SLpipeline.sh obsnums=$ons_hcn # admit=0
