@@ -64,9 +64,6 @@ for o in $obsnums ; do
     args=""
 done
 
-nc=$(cat $job1 | wc -l)
-echo Found $nc single obsnums
-
 #                   create the run file for combination runs
 echo SLpipeline.sh obsnums=$(echo $on1 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on2 | sed 's/ /,/g') srdp=1 >> $job2
@@ -85,3 +82,8 @@ ons_hcn=$(echo $on2 $on3 $on4 $on5 | sed 's/ /,/g')
 
 #SLpipeline.sh obsnums=$ons_co # admit=0
 #SLpipeline.sh obsnums=$ons_hcn # admit=0
+
+
+echo "Found $(cat $job1 | wc -l) single obsnums in $job1"
+echo "Found $(cat $job2 | wc -l) combinations in $job2"
+echo "Have fun running them."
