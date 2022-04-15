@@ -14,6 +14,8 @@ $(RUN1):	mk_runs
 $(RUN2):	mk_runs
 	./mk_runs
 
+runs:	$(RUN1) $(RUN2)
+
 run1:
 	@echo "Submit run1 using any of these methods:"
 	@echo "    sbatch_lmtoy.sh $(RUN1)"
