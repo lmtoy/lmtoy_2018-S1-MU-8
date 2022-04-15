@@ -22,9 +22,29 @@ of the data is.
 
               WORK_LMT=`pwd`
 
+   and no permissions in the $LMTOY tree are needed.
+
+On SLURM this is the way:
+
+      sbatch_lmtoy m51.run1
+      # wait for it to finish
+      sbatch_lmtoy m51.run2
+
+whereas on Gnu Parallel :
+
+      parallel --jobs 16 m51.run1
+      parallel --jobs 16 m51.run2
+
+can be submitted in a shell as the first one will not finish until all jobs are done.
+
 
 ## Files:
 
+The run1 and run2 files are kept separate, because each by themselved can be run in parallel
+(e.g. using SLURM or Gnu Parallel), but run2 needs to wait for run1 to finish before it can
+start.
+
 
       do_MU-8p - for the record, this is the original script that was used for testing
+      
       
