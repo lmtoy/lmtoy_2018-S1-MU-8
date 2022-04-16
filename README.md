@@ -99,6 +99,5 @@ Description of the file that should be in this directory
       mk_runs         script to make the run files
       m51.run1        created by mk_runs
       m51.run2        created by mk_runs
-      lmtinfo.log     output of "lmtinfo.py grep NGC5194"
-	  2018-S1-MU-8/   (optional) directory with pipeline results, otherwise in $WORK_LMT
-	  2018S1-MU-8/    (optional) directory with pipeline results, otherwise in $WORK_LMT
+      2018-S1-MU-8/   (optional) directory with pipeline results, otherwise in $WORK_LMT
+      2018S1-MU-8/    (optional) directory with pipeline results, otherwise in $WORK_LMT
