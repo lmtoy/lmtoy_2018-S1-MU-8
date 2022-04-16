@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 #
-#  M51 :  5 fields, 100 obsnum's
+#  edit and run this script to update the run scripts for the pipeline
+#
+#  M51 :  5 fields, 99 obsnum's
 #
 # e.g.       lmtinfo.py grep NGC5194 Map | awk '{print $4}' | sort uniq -c
 #1     24 NGC5194                115.2712    on0,on1
