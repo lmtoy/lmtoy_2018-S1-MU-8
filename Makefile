@@ -7,6 +7,7 @@ PID = 2018-S1-MU-8 2018S1-MU-8
 
 help:
 	@echo WORK_LMT=$(WORK_LMT)
+	@echo PID=$(PID)
 	@echo Targets here:
 	@echo "   runs      - make the run1/run2/... files"
 	@echo "   summary   - update the project summary index"
