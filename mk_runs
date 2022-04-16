@@ -13,12 +13,15 @@
 #         on 13-2020-02-13 is:  202.469583  47.195278  = 0.10" in RA and 0.38" in dec, so ignore ($on1)
 
 # All single obsnums:   10778.76user 1697.01system 20:26.46elapsed 1017%CPU
-#                       10992.94user 1279.43system 21:23.59elapsed  956%CPU
+#                       10992.94user 1279.43system 21:23.59elapsed  956%CPU     ?
+#                       12866.58user 1110.76system 20:15.14elapsed 1150%CPU     april-2022
+
+# Combos:                1059.77user   43.45system  6:00.55elapsed  305%CPU     april-2022
 
 extra="admit=0 dv=200 dw=200 restart=1 pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
 extra="admit=0 dv=200 dw=200 restart=1 extent=400"
 extra="admit=1 dv=200 dw=200 restart=1 extent=400"
-extra="admit=0 dv=200 dw=200 restart=1 extent=400"
+extra="admit=0 dv=200 dw=200 restart=1 extent=600"
 
 # ons=$(lmtinfo.py grep NGC5194 Map | awk '{print $2}')
 
@@ -51,7 +54,7 @@ project=$project1
 # ?
 mkdir -p $project
 
-#                       create the run file for single obsnum runs
+#                       create the run file for single obsnum runs, also incoorporate any obsnum specific arguments
 job1=m51.run1
 job2=m51.run2
 rm -f $job1 $job2
@@ -65,23 +68,18 @@ for o in $obsnums ; do
 done
 
 #                   create the run file for combination runs
+
 echo SLpipeline.sh obsnums=$(echo $on1 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on2 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on3 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on4 | sed 's/ /,/g') srdp=1 >> $job2
 
-# trials
-#SLpipeline.sh obsnums=91112,90666 # admit=0
-#SLpipeline.sh obsnums=91112,91041 # admit=0
-#SLpipeline.sh obsnums=90462,92504,92626,88878 # admit=0
-
-#
-
+#                   and ultimate combinations of CO and HCN
 ons_co=$(echo $on0 $on1 | sed 's/ /,/g')
 ons_hcn=$(echo $on2 $on3 $on4 $on5 | sed 's/ /,/g')
 
-#SLpipeline.sh obsnums=$ons_co # admit=0
-#SLpipeline.sh obsnums=$ons_hcn # admit=0
+echo SLpipeline.sh obsnums=$ons_co                      srdp=1 >> $job2
+echo SLpipeline.sh obsnums=$ons_hcn                     srdp=1 >> $job2
 
 
 echo "Found $(cat $job1 | wc -l) single obsnums in $job1"
