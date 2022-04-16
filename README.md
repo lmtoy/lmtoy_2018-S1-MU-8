@@ -2,7 +2,7 @@
 
 This project observed NGC5194 (M51) in CO and HCN. It was published in
 arXiv
-(accepted for publication in ApJ on April 15, 2022)
+(accepted for publication in ApJ on April 15, 2022) - [Heyer et. al 2022]
 
 The data produced in the paper were processed with the very first "unnamed" version
 of the pipeline: lmtoy_reduce.sh and lmtoy_combine.sh.
@@ -48,6 +48,11 @@ whereas on Gnu Parallel :
       parallel --jobs 16 m51.run2
 
 can be submitted in a shell as the first one will not finish until all jobs are done.
+
+If you have no good parallel/batch processing available, the slow and trusted way is:
+
+      bash m51.run1
+      bash m51.run2
 
 
 ### Alternate ProjectId's
