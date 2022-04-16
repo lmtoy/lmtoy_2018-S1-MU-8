@@ -7,13 +7,15 @@ See https://arxiv.org/abs/2204.xxxxx
 The data produced in the paper were processed with the very first "unnamed" version
 of the pipeline: lmtoy_reduce.sh and lmtoy_combine.sh, not this version [lmtoy 0.5 - spring 2022].
 
-NOTE: A few obsnums are by accident in **2018S1-MU-8**.
+![Figure 1 from paper](m51.png "Figure 1 from paper")
 
 ## OBSNUM
 
 A total of 99 science obsnum's were taken, 77 in the HCN line (88.6 GHz) and 22 in the CO line (115.3 GHz).
-The data were taken in a campaign between 15-jan-2020 and 13-mar-2020, the day of the COVID shutdown.
-Some more detailed descriptions are in the file **mk_runs**.
+The data were taken in a campaign between 15-jan-2020 and 13-mar-2020, the day of the COVID shutdown!
+
+Most obsnums are in **2018-S1-MU-8**, but by accident a few are in **2018S1-MU-8**.
+More detailed descriptions are in the file **mk_runs**.
 
 
 ## LMTOY Data Reduction
