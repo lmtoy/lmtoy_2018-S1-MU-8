@@ -14,10 +14,8 @@
 #  RA,DEC of most fields is:    202.469625  47.195172 (on0,on2,on3,on4,on5)
 #         on 13-2020-02-13 is:  202.469583  47.195278  = 0.10" in RA and 0.38" in dec, so ignore ($on1)
 
-# All single obsnums:   10778.76user 1697.01system   20:26.46elapsed 1017%CPU
-#                       10992.94user 1279.43system   21:23.59elapsed  956%CPU     ?
-#                       12866.58user 1110.76system   20:15.14elapsed 1150%CPU     april-2022
-#                       13467.10user 1005.57system 5:03:07.00elapsed   79%CPU     (single core all the way)
+# All single obsnums:   12866.58user 1110.76system   20:15.14elapsed 1150%CPU     (16 core parallel)
+#                       13467.10user 1005.57system 5:03:07.00elapsed   79%CPU     (single core)
 # Combos:                1059.77user   43.45system    6:00.55elapsed  305%CPU     april-2022
 
 extra="admit=0 dv=200 dw=200 restart=1 pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
@@ -43,18 +41,13 @@ on3b=""
 on4b=""
 on5b=""
 
-
-# bad: 91340 (bad restfrq and ProjectId)  - this is a pointing?
+# 91340 is a pointing, not M51
 
 obsnums="$on0 $on1 $on2 $on3 $on4 $on5"
 
 # oops, it got into two ProjectId's
 project1="2018-S1-MU-8"    # all but on1
 project2="2018S1-MU-8"     # only on1
-project=$project1
-
-# ?
-mkdir -p $project
 
 #                       create the run file for single obsnum runs, also incoorporate any obsnum specific arguments
 job1=m51.run1

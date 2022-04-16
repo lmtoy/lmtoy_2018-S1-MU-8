@@ -4,19 +4,24 @@ This project observed NGC5194 (M51) in CO and HCN. Results from these data were 
 arXiv (accepted for publication in ApJ on April 15, 2022) - [Heyer et. al 2022]
 See https://arxiv.org/abs/2204.xxxxx
 
-The data produced in the paper were processed with the very first "unnamed" version
-of the pipeline: lmtoy_reduce.sh and lmtoy_combine.sh, not this version [lmtoy 0.5 - spring 2022].
+The data produced for the paper were processed with the very first version
+of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh), not this version [lmtoy 0.5 - spring 2022].
+The purpose of these scripts is not to reproduce the exact data presented in the paper, but
+to show a path to reproduce them, and provide a template for other projects.
 
 ![Figure 1 from paper](m51.png "Figure 1 from paper")
 
 ## OBSNUM
 
 A total of 99 science obsnum's were taken, 77 in the HCN line (88.6 GHz) and 22 in the CO line (115.3 GHz).
-The data were taken in a campaign between 15-jan-2020 and 13-mar-2020, the day of the COVID shutdown!
+The data were taken in a nine week campaign between 15-jan-2020 and 13-mar-2020, the day of the COVID shutdown!
+Each observation covered (most of) the galaxy in about 20 minutes of integration time in an OTF style.
 
 Most obsnums are in **2018-S1-MU-8**, but by accident a few are in **2018S1-MU-8**.
 More detailed descriptions are in the file **mk_runs**.
 
+All data prior to xx-feb-2020 suffered from a hardware bug that causes RMS variations. High values will need
+to be clipped, and causes about xx% of the data to be flagged.
 
 ## LMTOY Data Reduction
 
