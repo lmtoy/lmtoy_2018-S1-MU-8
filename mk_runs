@@ -16,7 +16,8 @@
 
 # All single obsnums:   12866.58user 1110.76system   20:15.14elapsed 1150%CPU     (16 core parallel)
 #                       13467.10user 1005.57system 5:03:07.00elapsed   79%CPU     (single core)
-# Combos:                1059.77user   43.45system    6:00.55elapsed  305%CPU     april-2022
+# Combos:                1059.77user   43.45system    6:00.55elapsed  305%CPU     16 core
+#                        1860.36user   83.07system   54:41.12elapsed   59%CPU     single core
 
 extra="admit=0 dv=200 dw=200 restart=1 pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
 extra="admit=0 dv=200 dw=200 restart=1 extent=400"
