@@ -3,9 +3,13 @@
 
 RUN1 = m51.run1
 RUN2 = m51.run2
+PID = 2018-S1-MU-8 2018S1-MU-8
 
 help:
-	@echo There is no help here
+	@echo WORK_LMT=$(WORK_LMT)
+	@echo Targets here:
+	@echo "   runs      - make the run1/run2/... files"
+	@echo "   summary   - update the project summary index"
 
 
 $(RUN1):	mk_runs
@@ -28,3 +32,7 @@ run2:
 	@echo "    parallel --jobs 16 < $(RUN2)"
 	@echo "    bash $(RUN2)"
 
+summary:
+	@for p in $(PID); do \
+	(cd $(WORK_LMT)/$$p; echo $$p; mk_summary1.sh > README.html); \
+	done
