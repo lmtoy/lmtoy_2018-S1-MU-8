@@ -74,7 +74,7 @@ via your [unix shell](https://www.gnu.org/software/bash/):
       bash m51.run1
       bash m51.run2
 
-but this will take a while of course (XX minutes on "lma"):
+but this will take a while of course (5:04 hours on "lma"):
 
 ### Alternate ProjectId's
 
@@ -99,5 +99,6 @@ Description of the file that should be in this directory
       mk_runs         script to make the run files
       m51.run1        created by mk_runs
       m51.run2        created by mk_runs
+      m51.png         figure 1 from the paper
       2018-S1-MU-8/   (optional) directory with pipeline results, otherwise in $WORK_LMT
       2018S1-MU-8/    (optional) directory with pipeline results, otherwise in $WORK_LMT
