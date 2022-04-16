@@ -67,14 +67,14 @@ for o in $obsnums ; do
     args=""
 done
 
-#                   create the run file for combination runs
+#                       create the run file for combination runs
 
 echo SLpipeline.sh obsnums=$(echo $on1 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on2 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on3 | sed 's/ /,/g') srdp=1 >> $job2
 echo SLpipeline.sh obsnums=$(echo $on4 | sed 's/ /,/g') srdp=1 >> $job2
 
-#                   and ultimate combinations of CO and HCN
+#                       and ultimate combinations of CO and HCN
 ons_co=$(echo $on0 $on1 | sed 's/ /,/g')
 ons_hcn=$(echo $on2 $on3 $on4 $on5 | sed 's/ /,/g')
 
