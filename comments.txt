@@ -1,9 +1,9 @@
 # 2018-S1-MU-8 brief comments for each obsnum
-88874
+88874 demo
 88878
-88882
-88967
-88971
+88882 demo
+88967 demo
+88971 demo
 88990
 90139
 90141
@@ -41,18 +41,18 @@
 90660
 90664
 90666
-90740
-90744
-90758
-90911
-90915
-90947
-90951 last doppler reset bug
+90740 demo
+90744 demo
+90758 demo
+90911 demo
+90915 demo
+90947 demo
+90951 demo  - last doppler reset bug
 90995 first clean data
 90999
-91037
+91037 demo
 91041
-91112
+91112 demo
 91328
 91336
 91338
