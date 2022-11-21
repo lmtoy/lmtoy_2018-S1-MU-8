@@ -23,6 +23,12 @@ More detailed descriptions are in the file **mk_runs**.
 All data prior to xx-feb-2020 suffered from a hardware bug that causes RMS variations. High values will need
 to be clipped, and causes about xx% of the data to be flagged.
 
+Data views might be available in http://taps.lmtgtm.org/lmtslr/2018-S1-MU-8/README.html
+
+The paper quotes a main beam efficiency of 0.65, and RMS (in main beam scale) of 28 mK for CO and 8 mK for HCN, 
+in 5 km/s channels. 
+
+
 ## LMTOY Data Reduction
 
 There are two ways to run the SLpipeline, using a different $WORK_LMT directory where the root
