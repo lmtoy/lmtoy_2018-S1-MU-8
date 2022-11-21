@@ -1,8 +1,8 @@
 # 2018-S1-MU-8
 
-This project observed NGC5194 (M51) in CO and HCN. Results from these data were published on
-arXiv (accepted for publication in ApJ on April 15, 2022) - [Heyer et. al 2022]
-See https://arxiv.org/abs/2204.09613
+This project observed NGC5194 (M51) in CO and HCN. Results from these data were published in
+ApJ on April 15, 2022) - [Heyer et. al 2022]
+See https://ui.adsabs.harvard.edu/abs/2011ApJS..193...19K
 
 The data produced for the paper were processed with the very first version
 of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh), not this version [lmtoy 0.5 - spring 2022].
