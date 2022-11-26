@@ -18,10 +18,11 @@ The data were taken in a nine week campaign between 15-jan-2020 and 13-mar-2020,
 Each observation covered (most of) the galaxy in about 20 minutes of integration time in an OTF style.
 
 Most obsnums are in **2018-S1-MU-8**, but by accident a few are in **2018S1-MU-8**.
-More detailed descriptions are in the file **mk_runs**.
+More detailed descriptions are in the file **mk_runs.py**.
 
-All data prior to xx-feb-2020 suffered from a hardware bug that causes RMS variations. High values will need
-to be clipped, and causes about xx% of the data to be flagged.
+All data prior to 19-feb-2020 suffered from a hardware bug that causes RMS variations. High values will need
+to be clipped, and causes about xx% of the data to be flagged. The last bad obsnum in this project was
+90951, and 90995 was the first good one.
 
 Data views might be available in http://taps.lmtgtm.org/lmtslr/2018-S1-MU-8/README.html
 
@@ -29,7 +30,7 @@ The paper quotes a main beam efficiency of 0.65, and RMS (in main beam scale) of
 in 5 km/s channels. 
 
 
-## LMTOY Data Reduction
+## LMTOY Data Reduction (old)
 
 There are two ways to run the SLpipeline, using a different $WORK_LMT directory where the root
 of the data processing occurs
@@ -48,18 +49,15 @@ of the data processing occurs
 
 ### Creating the run files
 
-A master script **mk_runs** contains all the information on which obsnums are good,
+A master script **mk_runs.py** contains all the information on which obsnums are good,
 which beams are good, etc.  You always will need to re-run this script to create the
-SLpipeline *run* files. The script also uses the (optional) **OBSNUM.args** files, where
-arguments specific to this obsnum can be stored. These files should be edited by
-a user to create a new "final" dataset. Any optional post-processing after the
-pipeline will not be described here (but is of course recommended?).
+SLpipeline *run* files. The script also uses the **comments.txt** file, where
+arguments specific to this obsnum can be stored, though this is optional.
 
 This command creates the run files (it uses the **mk_runs** scripts):
 
       make runs
 	  
-in this case just **m51.run1** and **m51.run2**
 
 ### Running the pipeline
 
