@@ -2,14 +2,15 @@
 #
 #   script generator for project="2018-S1-MU-8"
 #
-#  M51 :  5 fields, 99 obsnum's
+#  NGC5194 (M51) :  5 fields, 99 obsnum's
+#  NGC628        :  1 field, 13 obsnum's
 #
-# e.g.       lmtinfo.py grep NGC5194 Map | awk '{print $4}' | sort uniq -c
-#1     24 NGC5194                115.2712    on0,on1
-#2     29 NGC5194-central         88.6318    on2
-#3     23 NGC5194_north           88.6318    on3
-#4     23 NGC5194_south           88.6318    on4
-#5      1 NGC5194-HCN-central     88.6318    on5
+# e.g.       lmtinfo.py grep S1-MU-8 Map | awk '{print $4}' | sort uniq -c
+#1     24 NGC5194                115.2712    
+#2     29 NGC5194-central         88.6318    
+#3     23 NGC5194_north           88.6318    
+#4     23 NGC5194_south           88.6318    
+#5      1 NGC5194-HCN-central     88.6318    
 
 #  RA,DEC of most fields is:    202.469625  47.195172 (on0,on2,on3,on4,on5)
 #         on 13-2020-02-13 is:  202.469583  47.195278  = 0.10" in RA and 0.38" in dec, so ignore ($on1)
@@ -29,22 +30,22 @@ except:
     print("No LMTOY with runs.py")
     sys.exit(0)
     
-project="2018-S1-MU-8"  # NGC628 NGC5194
+project="2018-S1-MU-8"  
 
 
 #        obsnums per source (make it negative if not added to the final combination)
 on = {}
 
-on['NGC5194-CO']  = [ 88874, 88882, 88967, 88971,                                 #  jan 15, 16 (all data taken in 2020)
+on['NGC5194-CO']  = [ 88874,-88882, 88967, 88971,                                 #  jan 15, 16 (all data taken in 2020)
                       90648, 90650, 90652, 90654, 90658, 90660, 90664, 90666,     #  feb 13, but wrong ProjectId='2018S1-MU-8'
-                      90740, 90744, 90758,                                        #  feb 14
-                      90911, 90915, 90947, 90951,                                 #  feb 18
-                      91037, 91041, 91112,                                        #  feb 19, 20 (first doppler clean data)
+                      90740, 90744,-90758,                                        #  feb 14
+                      90911, 90915,-90947, 90951,                                 #  feb 18
+                     -91037, 91041, 91112,                                        #  feb 19, 20 (first doppler clean data)
                      ]
 
 #  HCN has two source names and two PID's , lots of mistakes
-on['NGC5194-HCN']  = [ 90995, 90999,                   # NGC5194                   2018-S1-MU-8
-                       88878,                          # NGC5194-HCN-central       2018-S1-MU-8
+on['NGC5194-HCN']  = [ 90995, 90999,                   # NGC5194                   2018-S1-MU-8  - wrong source name
+                       88878,                          # NGC5194-HCN-central       2018-S1-MU-8  - wrong source name
                        88990,                          # NGC5194-central           2018-S1-MU-8
                        
                        90462,
@@ -84,3 +85,4 @@ pars2['NGC5194-HCN'] = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
 pars2['NGC628']      = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
 
 runs.mk_runs(project, on, pars1, pars2)
+
