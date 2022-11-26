@@ -19,7 +19,8 @@ $(RUN1):	mk_runs
 $(RUN2):	mk_runs
 	./mk_runs
 
-runs:	$(RUN1) $(RUN2)
+runs:
+	./mk_runs.py
 
 run1:
 	@echo "Submit run1 using any of these methods:"
