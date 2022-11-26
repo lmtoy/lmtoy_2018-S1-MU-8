@@ -63,8 +63,8 @@
 90915 demo
 90947 demo
 90951 demo  - last doppler reset bug
-90995 first clean data (HCN)
-90999
+90995 first clean data (HCN) +birdie
+90999  +birdie
 91037 demo
 91041
 91112 demo
