@@ -30,7 +30,8 @@ try:
 except:
     print("No LMTOY with runs.py")
     sys.exit(0)
-    
+
+#   notice a shadow project is 2018S1-MU-8 that needs a symlink to 2018-S1-MU-8
 project="2018-S1-MU-8"  
 
 
@@ -64,22 +65,13 @@ on['NGC628'] = [ 86278,                                     # 8-nov
                 ]
 
     
-# NGC5194-central
-# NGC5194-HCN-central
-# NGC5194_north
-# NGC5194_south
-# NGC628
-
-
-
-
-#        common parameters per source on the first dryrun (run1, run2)
+#        common parameters per source on the first run (run1a, run2a)
 pars1 = {}
 pars1['NGC5194-CO']  = "dv=250 dw=250 extent=600"
 pars1['NGC5194-HCN'] = "dv=250 dw=250 extent=600"
 pars1['NGC628']      = "dv=250 dw=250 extent=400"
 
-#        common parameters per source on subsequent runs (run1a, run2a)
+#        common parameters per source on subsequent runs (run1b, run2b)
 pars2 = {}
 pars2['NGC5194-CO']  = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
 pars2['NGC5194-HCN'] = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
