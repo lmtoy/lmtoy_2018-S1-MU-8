@@ -48,21 +48,21 @@
 90458 -5
 90460 -5
 90462 -5
-90648
-90650
-90652
-90654
-90658
-90660
-90664
-90666
-90740 demo
-90744 demo
-90758 demo
-90911 demo
-90915 demo
-90947 demo
-90951 demo  - last doppler reset bug
+90648 landscape?
+90650 landscape?
+90652 landscape?
+90654 landscape?
+90658 landscape?
+90660 landscape?
+90664 landscape?
+90666 landscape?
+90740 
+90744 
+90758 
+90911 
+90915 
+90947 
+90951 last doppler reset bug
 90995 -0,-5  first clean data (HCN) +birdie
 90999 -0,-5  +birdie
 91037 demo
