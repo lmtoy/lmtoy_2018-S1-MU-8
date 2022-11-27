@@ -9,6 +9,7 @@ help:
 	@echo Targets here:
 	@echo "   runs      - make the run1/run2/... files"
 	@echo "   summary   - update the project summary index"
+	@echo "               https://taps.lmtgtm.org/lmtslr/$(PID)"
 
 
 runs:
