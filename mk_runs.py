@@ -34,7 +34,6 @@ except:
 #   notice a shadow project is 2018S1-MU-8 that needs a symlink to 2018-S1-MU-8
 project="2018-S1-MU-8"  
 
-
 #        obsnums per source (make it negative if not added to the final combination)
 on = {}
 
@@ -85,12 +84,12 @@ on['NGC628'] = [ 86278,                                     # 8-nov
 pars1 = {}
 pars1['NGC5194-CO']  = "dv=250 dw=250 extent=600"
 pars1['NGC5194-HCN'] = "dv=250 dw=250 extent=600"
-pars1['NGC628']      = "dv=250 dw=250 extent=300"
+pars1['NGC628']      = "dv=100 dw=150 extent=240"
 
 #        common parameters per source on subsequent runs (run1b, run2b)
 pars2 = {}
 pars2['NGC5194-CO']  = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
-pars2['NGC5194-HCN'] = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
+pars2['NGC5194-HCN'] = ""
 pars2['NGC628']      = ""
 
 runs.mk_runs(project, on, pars1, pars2)
