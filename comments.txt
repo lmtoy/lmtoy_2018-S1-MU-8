@@ -1,4 +1,17 @@
 #  N628
+
+# 2018 commissioning data
+80043  # pix_list=-6
+80045  # pix_list=-2,-4,-5,-6
+80087  # pix_list=-2,-6,-10,-14
+80089  # pix_list=-2,-4,-5,-6,-10,-14
+80091  # pix_list=-2,-6,-10,-14
+80093  # pix_list=-2,-4,-5,-6,-10,-14
+80097  # pix_list=-2,-4,-5,-6,-10,-14
+80099  # pix_list=-2,-6,-10,-14
+80101  # pix_list=-2,-4,-5,-6,-10,-14
+
+# 2019/2020 formal data
 86278    -3                   # pix_list=-3
 88305    ok
 88307    -5 ?                 # pix_list=-5
@@ -67,7 +80,7 @@
 90999 -0,-5  +birdie                            # pix_list=-0,-5
 91037 bad
 91041 -
-91112 -
+91112 -0,-1,-5                         # pix_list=-0,-1,-5
 91328 pipeline crash?
 91336 -0,-1? birdie                    # pix_list=-0,-1
 91338 -0 birdie                        # pix_list=-0
