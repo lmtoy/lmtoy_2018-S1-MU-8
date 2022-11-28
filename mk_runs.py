@@ -1,23 +1,18 @@
 #! /usr/bin/env python
 #
-#   script generator for project="2018-S1-MU-8"
+#   script generator for project="2018-S1-MU-8" (but with a shadow  2018S1-MU-8"  projectId)
 #
-#  NGC5194 (M51) :  5 fields, 99 obsnum's
+#  NGC5194 (M51) :  5 fields, 99 obsnum's  - in CO and HCN
 #  NGC628        :  1 field, 13 obsnum's
 #
-# e.g.       lmtinfo.py grep S1-MU-8 Map | awk '{print $4}' | sort uniq -c
-#1     24 NGC5194                115.2712    
-#2     29 NGC5194-central         88.6318    
-#3     23 NGC5194_north           88.6318    
-#4     23 NGC5194_south           88.6318    
-#5      1 NGC5194-HCN-central     88.6318
-#6     14 NGC628
-
+#
 #  RA,DEC of most fields is:    202.469625  47.195172 (on0,on2,on3,on4,on5)
 #         on 13-2020-02-13 is:  202.469583  47.195278  = 0.10" in RA and 0.38" in dec, so ignore ($on1)
-
+#
 #
 # 90995 was the first doppler clean data (HCN)
+#
+# the 600" CO field takes about 2:50 hours per obsnum on unity, but could be made a bit smaller
 #
 import os
 import sys
@@ -77,6 +72,8 @@ on['NGC628'] = [ 86278,                                     # 8-nov
                  88649, 88653,                              # 14-jan
                  88801, 88805,                              # 15-jan
                  88915, 88919,                              # 16-jan
+                -80101,-80099,-80097,-80093,-80091,         # 20-nov-2018  in 2018S1SEQUOIACommissioning
+                -80089,-80087,-80045,-80043,                # adding these make CO signal disappear
                 ]
 
     
@@ -89,8 +86,9 @@ pars1['NGC628']      = "dv=100 dw=150 extent=240"
 #        common parameters per source on subsequent runs (run1b, run2b)
 pars2 = {}
 pars2['NGC5194-CO']  = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
-pars2['NGC5194-HCN'] = ""
-pars2['NGC628']      = ""
+pars2['NGC5194-HCN'] = ""     # see comments.txt
+pars2['NGC628']      = ""     # see comments.txt
 
 runs.mk_runs(project, on, pars1, pars2)
 
+print('\nMake sure "2018S1-MU-8" is symlinked to "2018-S1-MU-8" in $WORK_LMT')
