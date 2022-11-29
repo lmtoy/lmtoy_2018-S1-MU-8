@@ -6,7 +6,7 @@
 #  NGC628        :  1 field, 13 obsnum's
 #
 # e.g.       lmtinfo.py grep S1-MU-8 Map | awk '{print $4}' | sort uniq -c
-#1     24 NGC5194                115.2712    
+#1     24 NGC5194                115.2712    (18 out of the 22 are good)
 #2     29 NGC5194-central         88.6318    
 #3     23 NGC5194_north           88.6318    
 #4     23 NGC5194_south           88.6318    
