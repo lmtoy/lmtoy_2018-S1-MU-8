@@ -15,22 +15,14 @@
 #
 import os
 import sys
+from lmtoy import runs
 
-# in prep of the new lmtoy module
-try:
-    lmtoy = os.environ['LMTOY']
-    sys.path.append(lmtoy + '/lmtoy')
-    import runs
-except:
-    print("No LMTOY with runs.py")
-    sys.exit(0)
 
 #   notice a shadow project is 2018S1-MU-8 that needs a symlink to 2018-S1-MU-8
 project="2018-S1-MU-8"  
 
 #        obsnums per source (make it negative if not added to the final combination)
 on = {}
-
 
                     #   18 of the 22 here are good (4 have a focus issue)
 on['NGC5194-CO']  = [ 88874,-88882, 88967, 88971,                                 #  jan 15, 16 (all data taken in 2020)

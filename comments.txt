@@ -27,68 +27,10 @@
 #
 # M51
 #
-<<<<<<< HEAD
-88874 .
-88878 hcn
-88882 BAD (focus?)
-88967 .
-88971 .
-88990
-90139
-90141
-90143
-90149
-90151
-90155
-90157
-90163
-90268
-90270
-90274
-90276
-90280
-90282
-90286
-90381
-90383
-90385
-90389
-90442
-90444
-90446
-90450
-90452
-90454
-90458
-90460
-90462
-90648 .
-90650 .
-90652 .
-90654 .
-90658 .
-90660 .
-90664 .
-90666 .
-90740 .
-90744 .
-90758 BAD (focus?)
-90911 .
-90915 .
-90947 BAD (focus?)
-90951 last one of doppler reset bug
-90995 first clean data (HCN) +birdie
-90999  +birdie
-91037 BAD (focus?)
-91041 .
-91112 .
-91328
-91336
-91338
-=======
+
 88874 -
-88878 -0                   # pix_list=-0
-88882 bad
+88878 hcn                  # pix_list=-0
+88882 bad (focus?)
 88967 -
 88971 -
 88990 -0                   # pix_list=-0
@@ -130,20 +72,21 @@
 90666 landscape?
 90740 -
 90744 -
-90758 bad 
+90758 bad (focus?)
 90911 -
 90915 -
-90947 bad
+90947 bad (focus?)
 90951 last doppler reset bug
-90995 -0,-5  first clean data (HCN) +birdie     # pix_list=-0,-5
-90999 -0,-5  +birdie                            # pix_list=-0,-5
-91037 bad
+90995 first clean data (HCN) +birdie     # pix_list=-0,-5
+90999 +birdie                            # pix_list=-0,-5
+91037 bad (focus?)
 91041 -
 91112 -0,-1,-5                         # pix_list=-0,-1,-5
 91328 pipeline crash?
 91336 -0,-1? birdie                    # pix_list=-0,-1
 91338 -0 birdie                        # pix_list=-0
->>>>>>> 2eb673dd3789d07d47bae27c10989c0944d68f2d
+
+
 91340 pointing
 91344 -0,-1,-5?                        # pix_list=-0,-1,-5
 91346 -0,-1                            # pix_list=-0,-1
