@@ -82,6 +82,6 @@ pars2['NGC5194-CO']  = "pix_list=1,2,3,4,6,7,8,9,10,11,12,13,14,15"
 pars2['NGC5194-HCN'] = ""     # see comments.txt
 pars2['NGC628']      = ""     # see comments.txt
 
-runs.mk_runs(project, on, pars1, pars2)
+if __name__ == '__main__':    
+    runs.mk_runs(project, on, pars1, pars2, None, sys.argv)
 
-print('\nMake sure "2018S1-MU-8" is symlinked to "2018-S1-MU-8" in $WORK_LMT')
