@@ -5,7 +5,7 @@ ApJ on April 15, 2022) - [Heyer et. al 2022]
 See https://ui.adsabs.harvard.edu/abs/2011ApJS..193...19K
 
 The data produced for the paper were processed with the very first version
-of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh), not this version [lmtoy 0.5 - spring 2022].
+of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh).
 The purpose of these scripts is not to reproduce the exact data presented in the paper, but
 to show a path to reproduce them, and provide a template for other projects.
 
@@ -17,73 +17,21 @@ A total of 99 science obsnum's were taken, 77 in the HCN line (88.6 GHz) and 22 
 The data were taken in a nine week campaign between 15-jan-2020 and 13-mar-2020, the day of the COVID shutdown!
 Each observation covered (most of) the galaxy in about 20 minutes of integration time in an OTF style.
 
-Most obsnums are in **2018-S1-MU-8**, but by accident a few are in **2018S1-MU-8**.
+Most obsnums are in **2018-S1-MU-8**, but by accident a few are in **2018S1-MU-8**. We fixed the **lmtinfo.py**
+tool to sanitize the name, a symlink might also work, but has its own issues.
 More detailed descriptions are in the file **mk_runs.py**.
 
-All data prior to 19-feb-2020 suffered from a hardware bug that causes RMS variations. High values will need
-to be clipped, and causes about xx% of the data to be flagged. The last bad obsnum in this project was
+All data prior to 19-feb-2020 suffered from a hardware bug that causes bimodel or trimoal RMS variations. High
+values will need to be clipped, and causes about 10-20% of the data to be flagged. The last bad obsnum in this project was
 90951, and 90995 was the first good one.
 
-Data views might be available in http://taps.lmtgtm.org/lmtslr/2018-S1-MU-8/README.html
+Data views should be available in http://taps.lmtgtm.org/lmtslr/2018-S1-MU-8/README.html
 
 The paper quotes a main beam efficiency of 0.65, and RMS (in main beam scale) of 28 mK for CO and 8 mK for HCN, 
 in 5 km/s channels. 
 
-
-## LMTOY Data Reduction (old)
-
-There are two ways to run the SLpipeline, using a different $WORK_LMT directory where the root
-of the data processing occurs
-
-1. Use the WORK_LMT that came with where **lmtoy** was installed. This will likely require
-   write permission from the owner
-
-   This is the way it runs on Unity.
-
-2. Set WORK_LMT to a directory here in this directory,  something like
-
-              WORK_LMT=`pwd`
-
-   and no permissions in the $LMTOY tree are. Of course you still need to have LMTOY
-   installed. The pipeline will then create all  data products in this local directory.
-
-### Creating the run files
-
-A master script **mk_runs.py** contains all the information on which obsnums are good,
-which beams are good, etc.  You always will need to re-run this script to create the
-SLpipeline *run* files. The script also uses the **comments.txt** file, where
-arguments specific to this obsnum can be stored, though this is optional.
-
-This command creates the run files (it uses the **mk_runs** scripts):
-
-      make runs
-	  
-
-### Running the pipeline
-
-
-With [SLURM](https://slurm.schedmd.com/documentation.html) this is the way:
-
-      sbatch_lmtoy m51.run1
-      # wait for it to finish
-      sbatch_lmtoy m51.run2
-
-whereas with [Gnu Parallel](https://www.gnu.org/software/parallel/)
-
-      parallel --jobs 16 m51.run1
-      parallel --jobs 16 m51.run2
-
-can be submitted in a shell as the seond one will wait until the first one has finished
-all pipeline calls. On "lma" this takes about 30 minutes to process all single obsnums
-(run1) and a few combination maps (run2)
-
-If you have no good parallel/batch processing available, the slow and trusted way is
-via your [unix shell](https://www.gnu.org/software/bash/):
-
-      bash m51.run1
-      bash m51.run2
-
-but this will take a while of course (5:04 hours on "lma"):
+In the earlier reduction, HCN was taken with 7" pixel (16.1" beam), and the CO data with 5.5" pixel (12.65" beam).
+The correct beam for HCN should have been 10.6"
 
 ### Alternate ProjectId's
 
@@ -96,18 +44,21 @@ that pointing was optimal. most (all?) osbervations have (or should have) a regu
 before, maybe during, and after an observation. In theory one could use a cross-correlatoin
 technique to convince oneselves that the data are safe to stack.  *we will be looking into this*
 
+The lmtinfo.py program now patched the wrong PID, so it will appear ok now (fixed 2023)
 
-## Files:
+# Birdies
+
+Example:
+
+     tab_plot.py NGC5194-central_90270__0.bstats.tab
+
+shows channel 755 is affected. Others have 646 and/or 647 affected, near the edge of our dv/dw selection, and is
+less strong.
 
 
-Description of the file that should be in this directory
+90282/NGC5194-central_90282__0.bstats.tab   755 756 (smaller, next to it)
 
 
-      do_MU-8p        the original messy script that was used for testing
-      lmtinfo.log     logfile from lmtinfo.py on all relevant science observations
-      mk_runs         script to make the run files
-      m51.run1        created by mk_runs
-      m51.run2        created by mk_runs
-      m51.png         figure 1 from the paper
-      2018-S1-MU-8/   (optional) directory with pipeline results, otherwise in $WORK_LMT
-      2018S1-MU-8/    (optional) directory with pipeline results, otherwise in $WORK_LMT
+90460/NGC5194-central_90460__0.bstats.tab  a lot - crazy
+
+90951/NGC5194_90951__0.bstats.tab   1027..1031 (5 ) - crazy
