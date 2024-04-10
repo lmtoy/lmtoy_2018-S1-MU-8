@@ -4,6 +4,10 @@ This project observed NGC5194 (M51) in CO and HCN. Results from these data were 
 ApJ on April 15, 2022) - [Heyer et. al 2022]
 See https://ui.adsabs.harvard.edu/abs/2011ApJS..193...19K
 
+In addition, NGC628 was observed in CO, where a relatively large number of obsnums (10/22) were
+not usable. Only 12 were selected for the combination, but there might be some art left to
+improve that.
+
 The data produced for the paper were processed with the very first version
 of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh).
 The purpose of these scripts is not to reproduce the exact data presented in the paper, but
