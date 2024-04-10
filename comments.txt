@@ -34,21 +34,21 @@
 88967 -
 88971 -
 88990 -0                   # pix_list=-0
-90139 birdie
-90141 birdie
-90143 birdie
-90149 birdie
-90151 birdie
-90155 birdie
-90157 birdie
-90163 birdie
-90268 birdie
-90270 birdie
-90274 birdie
-90276 birdie
-90280 -5 birdie                   # pix_list=-5
-90282 -5 birdie                   # pix_list=-5
-90286 -5 birdie                   # pix_list=-5
+90139 birdie               # birdies=755
+90141 birdie               # birdies=755
+90143 birdie               # birdies=755
+90149 birdie               # birdies=755
+90151 birdie               # birdies=755
+90155 birdie               # birdies=755
+90157 birdie               # birdies=755
+90163 birdie               # birdies=755
+90268 birdie               # birdies=755
+90270 birdie               # birdies=755
+90274 birdie               # birdies=755
+90276 birdie               # birdies=755
+90280 -5 birdie                   # pix_list=-5 birdies=755
+90282 -5 birdie                   # pix_list=-5 birdies=755
+90286 -5 birdie                   # pix_list=-5 birdies=755
 90381 ok
 90383 ok
 90385 ok
