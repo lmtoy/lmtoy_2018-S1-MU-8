@@ -73,7 +73,7 @@ on['NGC628'] = [ 86278,                                     # 8-nov
 #        common parameters per source on the first run (run1a, run2a)
 pars1 = {}
 pars1['NGC5194-CO']  = "dv=250 dw=250 extent=600"
-pars1['NGC5194-HCN'] = "dv=250 dw=250 extent=600"      # needs a birdie fix
+pars1['NGC5194-HCN'] = "dv=250 dw=250 extent=600 birdies=755"
 pars1['NGC628']      = "dv=100 dw=150 extent=240"
 
 #        common parameters per source on subsequent runs (run1b, run2b)
