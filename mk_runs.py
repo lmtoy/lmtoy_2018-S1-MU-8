@@ -36,7 +36,7 @@ on['NGC5194-CO']  = [ 88874,-88882, 88967, 88971,                               
 on['NGC5194-HCN']  = [ 90995, 90999,                   # NGC5194                   2018-S1-MU-8  - wrong source name
                        88878,                          # NGC5194-HCN-central       2018-S1-MU-8  - wrong source name
                        88990,                          # NGC5194-central           2018-S1-MU-8
-                       90139, 90141, 90143, 90149, 
+                       90139, 90141,-90143, 90149, 
                        90151, 90155, 90157, 90163,
                        90268, 90270, 90274, 90276,
                        90280, 90282, 90286, 90381,
@@ -73,7 +73,7 @@ on['NGC628'] = [ 86278,                                     # 8-nov
 #        common parameters per source on the first run (run1a, run2a)
 pars1 = {}
 pars1['NGC5194-CO']  = "dv=250 dw=250 extent=600"
-pars1['NGC5194-HCN'] = "dv=250 dw=250 extent=600"      # needs a birdie fix
+pars1['NGC5194-HCN'] = "dv=250 dw=250 extent=600 birdies=755"
 pars1['NGC628']      = "dv=100 dw=150 extent=240"
 
 #        common parameters per source on subsequent runs (run1b, run2b)
