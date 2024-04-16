@@ -36,7 +36,7 @@
 88990 -0                   # pix_list=-0
 90139 birdie
 90141 birdie
-90143 birdie
+90143 birdie - corrupt file?
 90149 birdie
 90151 birdie
 90155 birdie
