@@ -44,7 +44,7 @@ was given the wrong name. In addition one pointing observation was stored under
 2018S1SEQUOIACommissioning.
 
 It may in fact be diserable to add certain pointing observations to the dataset, to confirm
-that pointing was optimal. most (all?) osbervations have (or should have) a regular pointing done
+that pointing was optimal. most (all?) observations have (or should have) a regular pointing done
 before, maybe during, and after an observation. In theory one could use a cross-correlatoin
 technique to convince oneselves that the data are safe to stack.  *we will be looking into this*
 
