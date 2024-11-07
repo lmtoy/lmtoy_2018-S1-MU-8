@@ -6,7 +6,7 @@ See https://ui.adsabs.harvard.edu/abs/2011ApJS..193...19K
 
 In addition, NGC628 was observed in CO, where a relatively large number of obsnums (10/22) were
 not usable. Only 12 were selected for the combination, but there might be some art left to
-improve that.
+improve that.  See also 2018S1SEQUOIACommissioning, where they were stored as a TEST.
 
 The data produced for the paper were processed with the very first version
 of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh).
