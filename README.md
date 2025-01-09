@@ -62,7 +62,6 @@ less strong.
 
 90282/NGC5194-central_90282__0.bstats.tab   755 756 (smaller, next to it)
 
-
 90460/NGC5194-central_90460__0.bstats.tab  a lot - crazy
 
 90951/NGC5194_90951__0.bstats.tab   1027..1031 (5 ) - crazy
