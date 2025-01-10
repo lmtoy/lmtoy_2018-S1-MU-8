@@ -6,7 +6,7 @@ See https://ui.adsabs.harvard.edu/abs/2022ApJ...930..170H
 
 In addition, NGC628 was observed in CO, where a relatively large number of obsnums (10/22) were
 not usable. Only 12 were selected for the combination, but there might be some art left to
-improve that.
+improve that.  See also 2018S1SEQUOIACommissioning, where they were stored as a TEST.
 
 The data produced for the paper were processed with the very first version
 of the pipeline (at the time named lmtoy_reduce.sh and lmtoy_combine.sh).
@@ -44,7 +44,7 @@ was given the wrong name. In addition one pointing observation was stored under
 2018S1SEQUOIACommissioning.
 
 It may in fact be diserable to add certain pointing observations to the dataset, to confirm
-that pointing was optimal. most (all?) osbervations have (or should have) a regular pointing done
+that pointing was optimal. most (all?) observations have (or should have) a regular pointing done
 before, maybe during, and after an observation. In theory one could use a cross-correlatoin
 technique to convince oneselves that the data are safe to stack.  *we will be looking into this*
 
