@@ -2,7 +2,7 @@
 
 This project observed NGC5194 (M51) in CO and HCN. Results from these data were published in
 ApJ on April 15, 2022) - [Heyer et. al 2022]
-See https://ui.adsabs.harvard.edu/abs/2011ApJS..193...19K
+See https://ui.adsabs.harvard.edu/abs/2022ApJ...930..170H
 
 In addition, NGC628 was observed in CO, where a relatively large number of obsnums (10/22) were
 not usable. Only 12 were selected for the combination, but there might be some art left to
