@@ -2,14 +2,14 @@
 
 # 2018 commissioning data
 80043  # pix_list=-6
-80045  # pix_list=-2,-4,-5,-6
-80087  # pix_list=-2,-6,-10,-14
-80089  # pix_list=-2,-4,-5,-6,-10,-14
-80091  # pix_list=-2,-6,-10,-14
-80093  # pix_list=-2,-4,-5,-6,-10,-14
-80097  # pix_list=-2,-4,-5,-6,-10,-14
-80099  # pix_list=-2,-6,-10,-14
-80101  # pix_list=-2,-4,-5,-6,-10,-14
+80045  # pix_list=-2,4,5,6
+80087  # pix_list=-2,6,10,14
+80089  # pix_list=-2,4,5,6,10,14
+80091  # pix_list=-2,6,10,14
+80093  # pix_list=-2,4,5,6,10,14
+80097  # pix_list=-2,4,5,6,10,14
+80099  # pix_list=-2,6,10,14
+80101  # pix_list=-2,4,5,6,10,14
 
 # 2019/2020 formal data
 86278    -3                   # pix_list=-3
@@ -19,7 +19,7 @@
 88313   -0 horiz stripe       # pix_list=-0
 88315   -0 horiz stripe       # pix_list=-0
 88501   crazy sky coverage
-88649   -0,-5                 # pix_list=-0,-5
+88649   -0,-5                 # pix_list=-0,5
 88653   -5                    # pix_list=-5
 88801   -0                    # pix_list=-0
 88805   -0                    # pix_list=-0
@@ -79,14 +79,14 @@
 90915 -
 90947 bad (focus?)
 90951 last doppler reset bug
-90995 first clean data (HCN) +birdie     # pix_list=-0,-5
-90999 +birdie                            # pix_list=-0,-5
+90995 first clean data (HCN) +birdie     # pix_list=-0,5
+90999 +birdie                            # pix_list=-0,5
 91037 bad (focus?)
-91041 -
-91112 -0,-1,-5                         # pix_list=-0,-1,-5
+91041 -                                  # pix_list=-0,1,5
+91112 -0,-1,-5                           # pix_list=-0,1,5
 91328 pipeline crash?
-91336 -0,-1? birdie                    # pix_list=-0,-1
-91338 -0 birdie                        # pix_list=-0
+91336 -0,-1? birdie                      # pix_list=-0,1
+91338 -0 birdie                          # pix_list=-0
 
 
 91340 pointing
