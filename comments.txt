@@ -28,7 +28,7 @@
 # M51
 #
 
-88874 -
+88874 -       # qagrade=0
 88878 hcn                  # pix_list=-0
 88882 bad (focus?)
 88967 -
