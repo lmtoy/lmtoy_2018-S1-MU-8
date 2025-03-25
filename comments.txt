@@ -133,12 +133,14 @@
 92504 OK
 92626 -5			       # pix_list=-5
 
-90666_90648  combo on1
-90462_88990  combo on2
-92504_91328  combo on3
-92626_91338  combo on4
-91112_90648  Final CO
-90462_88878  Final HCN
+90666_90648  combo on1                 # maskmoment=1
+90462_88990  combo on2                 # maskmoment=1
+92504_91328  combo on3                 # maskmoment=1
+92626_91338  combo on4                 # maskmoment=1
+91112_90648  Final CO                  # maskmoment=1
+90462_88878  Final HCN                 # maskmoment=1
 
-86278_88919  NGC628 final combo
+
+86278_88919  NGC628 final CO           # maskmoment=1
+
 
