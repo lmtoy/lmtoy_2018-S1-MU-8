@@ -1,15 +1,15 @@
 #  N628
 
-# 2018 commissioning data
-80043  # pix_list=-6
-80045  # pix_list=-2,4,5,6
-80087  # pix_list=-2,6,10,14
-80089  # pix_list=-2,4,5,6,10,14
-80091  # pix_list=-2,6,10,14
-80093  # pix_list=-2,4,5,6,10,14
-80097  # pix_list=-2,4,5,6,10,14
-80099  # pix_list=-2,6,10,14
-80101  # pix_list=-2,4,5,6,10,14
+# 2018 commissioning data for NGC628
+80043  QAFAIL # pix_list=-6
+80045  QAFAIL # pix_list=-2,4,5,6
+80087  QAFAIL # pix_list=-2,6,10,14
+80089  QAFAIL # pix_list=-2,4,5,6,10,14
+80091  QAFAIL # pix_list=-2,6,10,14
+80093  QAFAIL # pix_list=-2,4,5,6,10,14
+80097  QAFAIL # pix_list=-2,4,5,6,10,14
+80099  QAFAIL # pix_list=-2,6,10,14
+80101  QAFAIL # pix_list=-2,4,5,6,10,14
 
 # 2019/2020 formal data
 86278    -3                   # pix_list=-3
@@ -18,7 +18,7 @@
 88311    ok
 88313   -0 horiz stripe       # pix_list=-0
 88315   -0 horiz stripe       # pix_list=-0
-88501   crazy sky coverage
+88501   QAFAIL crazy sky coverage
 88649   -0,-5                 # pix_list=-0,5
 88653   -5                    # pix_list=-5
 88801   -0                    # pix_list=-0
@@ -144,3 +144,8 @@
 86278_88919  NGC628 final CO           # maskmoment=1
 90995_92626  M51 Final HCN             # maskmoment=1
 88874_91112  M51 Final CO              # maskmoment=1
+
+# NGC628[12/22] : 86278,88305,88307,88311,88313,88315,88649,88653,88801,88805,88915,88919
+#    NGC 628 bad obsnums
+
+ 
